@@ -149,6 +149,9 @@ h1 {
         }
           
     }
+    .div-logicielsTablette{
+        display: none;
+    }
     
     
 }
@@ -410,6 +413,160 @@ h1 {
         transition: all ease-in-out 0.3s;
         &:hover {
             background-color: #007f5c;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px) {
+    .article-me-concernant {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgb(253,244,227);
+        background: linear-gradient(25deg, rgba(253,244,227,1) 0%, rgba(163,179,179,1) 45%, rgb(2, 65, 88) 100%);
+        border-radius: 50px;
+        .div-me-concernant {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: 480px;
+            .phrase-me-concernant {
+                width: auto;
+                padding: 15px;
+            }
+           .div-image-me-concernant { 
+            display: flex;
+            align-items: center;
+                .image-me-concernant {
+                    width:auto;
+                    height:300px;
+                    background:#069;
+                    margin: 0;
+                    border-radius:50% / 50%; 
+                    justify-content: center;
+                    margin-left: 15px;
+                    img {
+                        display: block;
+                        width: auto;
+                        height: 480px;
+                        
+                    }
+                }  
+           }     
+            .div-milieu-me-concernant {
+                width: 30%;
+                height: 480px;
+                position   : relative; 
+                text-align: center;
+                z-index: 3;
+                margin-left: -40px;
+                font-size: 22px;
+            }
+            .div-logiciels {
+                display: none;  
+            }
+            
+              
+        }
+    }
+    .div-logicielsTablette {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        h3 {
+            display: flex;
+            img {
+                margin-right: 10px;
+            }
+        }
+        .div-image-logiciels {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: auto;
+            .image-logiciels {
+                width: 30px;
+                height: 30px;
+            }
+        } 
+
+    }
+    .article-projets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        cursor:grab;
+        .fa-arrow-left {
+            margin-right: 30px ;
+            cursor: pointer;
+        }
+        .fa-arrow-right {
+            margin-left: 30px ;
+            cursor:grab;
+        }
+        .container-projets {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            .div-projets {
+                display: flex;
+                width: 80vw;
+                height: auto;
+                flex-direction: column;
+                position: relative;
+                align-items: center;
+                margin-bottom: 10vh;
+                user-select: none;
+                a { 
+                    cursor:pointer;
+                    .projet-image {
+                        width: 100%;
+                        height: auto;
+                        margin-left: 0;
+                        border-radius: 20px;
+                        box-shadow: 2px 5px 10px rgb(0, 0, 0);
+                        object-fit: cover;
+                        height: 200px;
+                        object-position: 100% 100%;
+                        cursor: pointer;
+                    }
+    
+                }
+                .telechargement, .visualisation {
+                    display: flex;
+                    margin: auto;
+                    border-radius: 50px;
+                    font-size: 20px;
+                    width: 30%;
+                    color: white;
+                    background-color: rgba(235, 13,57, 959);
+                    padding: 15px;
+                    margin-bottom: 20px ;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: crimson;
+                    }
+                    .download-button {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                        cursor: pointer;
+                    }
+                    i {
+                        margin-left: 15px;
+                    }
+                }
+            }
         }
     }
 }

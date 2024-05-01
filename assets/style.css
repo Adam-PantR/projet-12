@@ -227,6 +227,9 @@ h1 {
   width: 30px;
   height: 30px;
 }
+.article-me-concernant .div-logicielsTablette {
+  display: none;
+}
 
 .article-projets {
   display: flex;
@@ -474,6 +477,155 @@ h1 {
 }
 .modal .modal-button:hover {
   background-color: #007f5c;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px) {
+  .article-me-concernant {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(253, 244, 227);
+    background: linear-gradient(25deg, rgb(253, 244, 227) 0%, rgb(163, 179, 179) 45%, rgb(2, 65, 88) 100%);
+    border-radius: 50px;
+  }
+  .article-me-concernant .div-me-concernant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 480px;
+  }
+  .article-me-concernant .div-me-concernant .phrase-me-concernant {
+    width: auto;
+    padding: 15px;
+  }
+  .article-me-concernant .div-me-concernant .div-image-me-concernant {
+    display: flex;
+    align-items: center;
+  }
+  .article-me-concernant .div-me-concernant .div-image-me-concernant .image-me-concernant {
+    width: auto;
+    height: 300px;
+    background: #069;
+    margin: 0;
+    border-radius: 50%/50%;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  .article-me-concernant .div-me-concernant .div-image-me-concernant .image-me-concernant img {
+    display: block;
+    width: auto;
+    height: 480px;
+  }
+  .article-me-concernant .div-me-concernant .div-milieu-me-concernant {
+    width: 30%;
+    height: 480px;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    margin-left: -40px;
+    font-size: 22px;
+  }
+  .article-me-concernant .div-me-concernant .div-logiciels {
+    display: none;
+  }
+  .div-logicielsTablette {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .div-logicielsTablette h3 {
+    display: flex;
+  }
+  .div-logicielsTablette h3 img {
+    margin-right: 10px;
+  }
+  .div-logicielsTablette .div-image-logiciels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+  }
+  .div-logicielsTablette .div-image-logiciels .image-logiciels {
+    width: 30px;
+    height: 30px;
+  }
+  .article-projets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    cursor: grab;
+  }
+  .article-projets .fa-arrow-left {
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .article-projets .fa-arrow-right {
+    margin-left: 30px;
+    cursor: grab;
+  }
+  .article-projets .container-projets {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-projets .container-projets .div-projets {
+    display: flex;
+    width: 80vw;
+    height: auto;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin-bottom: 10vh;
+    user-select: none;
+  }
+  .article-projets .container-projets .div-projets a {
+    cursor: pointer;
+  }
+  .article-projets .container-projets .div-projets a .projet-image {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px rgb(0, 0, 0);
+    object-fit: cover;
+    height: 200px;
+    object-position: 100% 100%;
+    cursor: pointer;
+  }
+  .article-projets .container-projets .div-projets .telechargement, .article-projets .container-projets .div-projets .visualisation {
+    display: flex;
+    margin: auto;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 30%;
+    color: white;
+    background-color: rgb(235, 13, 57);
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .article-projets .container-projets .div-projets .telechargement:hover, .article-projets .container-projets .div-projets .visualisation:hover {
+    background-color: crimson;
+  }
+  .article-projets .container-projets .div-projets .telechargement .download-button, .article-projets .container-projets .div-projets .visualisation .download-button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .article-projets .container-projets .div-projets .telechargement a, .article-projets .container-projets .div-projets .visualisation a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  .article-projets .container-projets .div-projets .telechargement i, .article-projets .container-projets .div-projets .visualisation i {
+    margin-left: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
