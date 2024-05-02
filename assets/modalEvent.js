@@ -21,7 +21,7 @@ const projects = [
     },
     {
         "name":"Prototype Steam",
-        "paragraph":"Test"
+        "paragraph":"Le projet Steam est un projet visant à reprendre les principes d'UX design et d'en faire un story telling. On y retrouve le user flow, un story board, une maquette et autre. La majeur partie a été réalisée à l'aide de Adobe XD et PowerPoint."
     },
 ];
 
