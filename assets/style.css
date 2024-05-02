@@ -864,7 +864,7 @@ h1 {
   }
   .article-me-concernant .div-me-concernant .div-image-me-concernant .image-me-concernant {
     width: auto;
-    height: 300px;
+    height: 40%;
     background: #069;
     margin: 0;
     border-radius: 50%/50%;
