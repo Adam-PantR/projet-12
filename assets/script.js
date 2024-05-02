@@ -28,6 +28,7 @@ for (let i = 0 ; i < 3; i++ ){
 	//On créer une image pour chacune des images présentes dans le tableau "slides"
 	const imagesElement = document.createElement("img");
 	imagesElement.src = imgCarrousel.image;
+  imagesElement.alt = ("bannière de carousel " + [i]);
 	imagesElement.className = "banner-img carrousel-image";
 
 	//On créer une div pour y contenir l'image et le texte créé
