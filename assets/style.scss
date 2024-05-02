@@ -24,6 +24,9 @@ header{
 .headerMobile{
     display: none;
 }
+.display-mobile {
+    display: none;
+}
 .header {
     width: 100%;
     height: 100px;
@@ -37,8 +40,9 @@ header{
         display: flex;
         font-weight: 700;
         position: absolute;
-        top: 50px;
-        left: 150px;
+        top: 0px;
+        left: 50px;
+        width: 100px;
     }
     .header-content {
         display: flex;
@@ -455,8 +459,9 @@ h1 {
             display: flex;
             font-weight: 700;
             position: absolute;
-            top: 40px;
+            top: 10px;
             left: 40px;
+            width: 80px;
         }
         .header-content {
             display: flex;
@@ -760,46 +765,116 @@ h1 {
 
 @media screen and (max-width: 600px) {
     #carrousel {
-        height: 80vh;
+        height: 60vh;
+        #left {
+            position: absolute;
+            font-size: 50px;
+            cursor: pointer;
+            left: 20px;
+            top: 50%;
+            color: white;
+            &:hover {
+                transform: scale(1.2);
+                transition: all 0.5s ease;
+              }
+          }
+          #right {
+            position: absolute;
+            font-size: 50px;
+            cursor: pointer;
+            right: 20px;
+            top: 50%;
+            color: white;
+            &:hover {
+                transform: scale(1.2);
+                transition: all 0.5s ease;
+              }
+          }
+        #carrousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            .itemSlider{
+                .carrousel-image {
+                    height: auto;
+                    width: 100%;
+                    object-fit: contain;
+                  }
+            }
+            div {
+                height: 400px;
+            }
+            
+        }
         .dots {
             margin-bottom: 40px;
         }
     }
+    .display-mobile {
+        display: flex;
+        i{
+            position: absolute;
+            right: 40px;
+            top: 25px;
+            font-size: 40px;
+        }
+    }
     .headerMobile {
-        width: auto;
+        width: 100%;
         height: 100px;
         color: $primary-color;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        position: relative;
+        position: fixed;
+        z-index: 10;
         .logo {
             display: flex;
             font-weight: 700;
             position: absolute;
-            top: 40px;
+            top: 0px;
             left: 40px;
+            width: 80px;
         }
         .header-content {
+            width: 100%;
             display: flex;
-            flex-direction: row;
-            position: absolute;
-            right: 2vw;
+            flex-direction: column;
+            margin-top: 200px;
+            gap: 10px;
+            z-index: 1;
+            background: white;
+            align-items: center;
+            opacity: 0.9;
+            position: fixed;
+            left: 100%;
+            transition: 0.25s ease-in-out;
             
             a {
-                margin-left: 20px;
-                font-size: 15px;
+                margin-left: 0;
+                margin-top: 0;
+                font-size: 20px;
                 text-decoration: none;
                 color: $primary-color;
             }
             .header-icon {
+                display: none;
                 color: $primary-color;
-                margin-left: 30px;
+                margin-left: 0px;
                 font-size: 17.5px;
                 cursor: pointer;
+                margin-left: 20px;
             }
-        }   
+        }  
+        .active{
+            left: auto ;
+        } 
+        #x-mark {
+            display: none;
+        }
     }
     .header {
         display: none;
@@ -807,7 +882,7 @@ h1 {
     .article-me-concernant {
         display: flex;
         width: 100%;
-        height: auto;
+        height: 520px;
         margin-left: auto;
         margin-right: auto;
         background: rgb(253,244,227);
@@ -818,12 +893,12 @@ h1 {
             flex-direction: row;
             justify-content: space-around;
             width: 100%;
-            height: 480px;
+            height: 520px;
             .phrase-me-concernant {
                 width: auto;
                 padding: 15px;
                 p {
-                    font-size: 18px;
+                    font-size: calc(0.1rem + 1rem);
                 }
             }
             h2 {
@@ -836,26 +911,19 @@ h1 {
                     width:auto;
                     height:40%;
                     background:#069;
-                    margin: 0;
+                    margin: -250px 0 0 0;
                     border-radius:50% / 50%; 
                     justify-content: center;
-                    margin-left: 15px;
-                    img {
-                        display: block;
-                        width: auto;
-                        height: 480px;
-                        
-                    }
                 }  
            }     
             .div-milieu-me-concernant {
-                width: auto;
+                width: 50%;
                 height: auto;
                 position : relative; 
                 text-align: center;
                 z-index: 3;
                 margin-left: -40px;
-                font-size: 22px;
+                font-size: calc(0.1rem + 1rem);
             }
             .div-logiciels {
                 display: none;  
@@ -879,10 +947,11 @@ h1 {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    width: auto;
+                    width: 100%;
+                    margin-left: -30vw;
                     .image-logiciels {
-                        width: 10px;
-                        height: 10px;
+                        width: 20px;
+                        height: 20px;
                     }
                 } 
         
@@ -982,13 +1051,13 @@ h1 {
             flex-direction: column;
             align-items: center;
             p {
-                margin-right: 30px;
+                margin-right: 0;
                 font-size: 16px;
             }
             h2 {
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 16px;
             }
         }
         &-formulaire {
@@ -999,11 +1068,13 @@ h1 {
             display: flex;
             flex-direction: row;
             &-h3 {
+                display: none;
                 width: auto;
-                padding-left: 15px;     
+                padding-left: 15px;   
+                font-size: 16px !important;  
                 &-image {
-                    width: 100%;
-                    height: 180px;
+                    width: 80%;
+                    height: 50px;
                     object-fit: cover;
                     border-radius: 25px;;
                 }                                    

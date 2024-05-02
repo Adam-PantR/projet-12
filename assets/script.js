@@ -196,3 +196,39 @@ window.onmouseup = () => {
   track.dataset.prevPercentage = track.dataset.percentage;
 }
 
+
+// Menu déroulant version mobile
+
+
+const menuIcon = document.querySelector('.menu-icon');
+const headerContent = document.getElementById('header-mobile-toggle');
+const xMark = document.getElementById('x-mark');
+const burgerMenu = document.getElementById('burger-menu');
+
+xMark.addEventListener('click', function () {
+  console.log(headerContent);
+  headerContent.classList.toggle('active');
+  if (headerContent.classList.contains('active')) {
+    xMark.style.display = "flex";
+    burgerMenu.style.display = "none";
+  } else {
+    xMark.style.display = "none";
+    burgerMenu.style.display = "flex";
+  }
+});
+
+
+burgerMenu.addEventListener('click', function () {
+  console.log(headerContent);
+  headerContent.classList.toggle('active');
+  if (headerContent.classList.contains('active')) {
+    xMark.style.display = "flex";
+    burgerMenu.style.display = "none";
+  } else {
+    xMark.style.display = "none";
+    burgerMenu.style.display = "flex";
+  }
+});
+
+
+

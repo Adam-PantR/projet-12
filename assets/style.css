@@ -107,6 +107,10 @@ header {
   display: none;
 }
 
+.display-mobile {
+  display: none;
+}
+
 .header {
   width: 100%;
   height: 100px;
@@ -121,8 +125,9 @@ header {
   display: flex;
   font-weight: 700;
   position: absolute;
-  top: 50px;
-  left: 150px;
+  top: 0px;
+  left: 50px;
+  width: 100px;
 }
 .header .header-content {
   display: flex;
@@ -504,8 +509,9 @@ h1 {
     display: flex;
     font-weight: 700;
     position: absolute;
-    top: 40px;
+    top: 10px;
     left: 40px;
+    width: 80px;
   }
   .header .header-content {
     display: flex;
@@ -788,45 +794,112 @@ h1 {
 }
 @media screen and (max-width: 600px) {
   #carrousel {
-    height: 80vh;
+    height: 60vh;
+  }
+  #carrousel #left {
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+    left: 20px;
+    top: 50%;
+    color: white;
+  }
+  #carrousel #left:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+  }
+  #carrousel #right {
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+    right: 20px;
+    top: 50%;
+    color: white;
+  }
+  #carrousel #right:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+  }
+  #carrousel #carrousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  #carrousel #carrousel-container .itemSlider .carrousel-image {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+  #carrousel #carrousel-container div {
+    height: 400px;
   }
   #carrousel .dots {
     margin-bottom: 40px;
   }
+  .display-mobile {
+    display: flex;
+  }
+  .display-mobile i {
+    position: absolute;
+    right: 40px;
+    top: 25px;
+    font-size: 40px;
+  }
   .headerMobile {
-    width: auto;
+    width: 100%;
     height: 100px;
     color: #0e1c41;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    position: relative;
+    position: fixed;
+    z-index: 10;
   }
   .headerMobile .logo {
     display: flex;
     font-weight: 700;
     position: absolute;
-    top: 40px;
+    top: 0px;
     left: 40px;
+    width: 80px;
   }
   .headerMobile .header-content {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 2vw;
+    flex-direction: column;
+    margin-top: 200px;
+    gap: 10px;
+    z-index: 1;
+    background: white;
+    align-items: center;
+    opacity: 0.9;
+    position: fixed;
+    left: 100%;
+    transition: 0.25s ease-in-out;
   }
   .headerMobile .header-content a {
-    margin-left: 20px;
-    font-size: 15px;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 20px;
     text-decoration: none;
     color: #0e1c41;
   }
   .headerMobile .header-content .header-icon {
+    display: none;
     color: #0e1c41;
-    margin-left: 30px;
+    margin-left: 0px;
     font-size: 17.5px;
     cursor: pointer;
+    margin-left: 20px;
+  }
+  .headerMobile .active {
+    left: auto;
+  }
+  .headerMobile #x-mark {
+    display: none;
   }
   .header {
     display: none;
@@ -834,7 +907,7 @@ h1 {
   .article-me-concernant {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 520px;
     margin-left: auto;
     margin-right: auto;
     background: rgb(253, 244, 227);
@@ -846,14 +919,14 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    height: 480px;
+    height: 520px;
   }
   .article-me-concernant .div-me-concernant .phrase-me-concernant {
     width: auto;
     padding: 15px;
   }
   .article-me-concernant .div-me-concernant .phrase-me-concernant p {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
   .article-me-concernant .div-me-concernant h2 {
     font-size: 20px;
@@ -866,24 +939,18 @@ h1 {
     width: auto;
     height: 40%;
     background: #069;
-    margin: 0;
+    margin: -250px 0 0 0;
     border-radius: 50%/50%;
     justify-content: center;
-    margin-left: 15px;
-  }
-  .article-me-concernant .div-me-concernant .div-image-me-concernant .image-me-concernant img {
-    display: block;
-    width: auto;
-    height: 480px;
   }
   .article-me-concernant .div-me-concernant .div-milieu-me-concernant {
-    width: auto;
+    width: 50%;
     height: auto;
     position: relative;
     text-align: center;
     z-index: 3;
     margin-left: -40px;
-    font-size: 22px;
+    font-size: 1.1rem;
   }
   .article-me-concernant .div-me-concernant .div-logiciels {
     display: none;
@@ -908,11 +975,12 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: auto;
+    width: 100%;
+    margin-left: -30vw;
   }
   .article-me-concernant .div-me-concernant .div-logicielsTablette .div-image-logiciels .image-logiciels {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
   }
   .article-projets {
     display: flex;
@@ -1006,13 +1074,13 @@ h1 {
     align-items: center;
   }
   .footer-coordonnees p {
-    margin-right: 30px;
+    margin-right: 0;
     font-size: 16px;
   }
   .footer-coordonnees h2 {
     margin-left: auto;
     margin-right: auto;
-    font-size: 20px;
+    font-size: 16px;
   }
   .footer-formulaire {
     width: 100%;
@@ -1023,12 +1091,14 @@ h1 {
     flex-direction: row;
   }
   .footer-formulaire-h3 {
+    display: none;
     width: auto;
     padding-left: 15px;
+    font-size: 16px !important;
   }
   .footer-formulaire-h3-image {
-    width: 100%;
-    height: 180px;
+    width: 80%;
+    height: 50px;
     object-fit: cover;
     border-radius: 25px;
   }
