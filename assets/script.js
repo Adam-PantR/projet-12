@@ -1,14 +1,14 @@
 const slides = [
 	{
-		"image":"./assets/image/image1.webp",
+		"image":"./assets/image/banner-infographiste.webp",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
 	{
-		"image":"./assets/image/image2.webp",
+		"image":"./assets/image/banner-webmaster.webp",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
 	{
-		"image":"./assets/image/image3.webp",
+		"image":"./assets/image/banner-webdesigner.webp",
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 ];
